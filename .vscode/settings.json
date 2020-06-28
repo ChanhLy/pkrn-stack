@@ -1,0 +1,27 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.iconTheme": "vscode-icons",
+    "files.autoSave": "onFocusChange",
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "window.zoomLevel": 1,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "cSpell.userWords": [
+        "antd",
+        "browserslist",
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "cSpell.words": [
+        "Chanh",
+        "Postgres",
+        "prestart"
+    ],
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.singleQuote": true,
+    "prettier.jsxSingleQuote": true
+}
