@@ -1,24 +1,32 @@
-import Koa from 'koa';
-import body from 'koa-body';
-import logger from 'koa-logger';
+import Application = require('koa');
+import koaBody = require('koa-body');
+import KoaLogger = require('koa-logger');
 import httpStatus from 'http-status';
 
-const app = new Koa();
+const app = new Application();
 
-app.use(logger);
-app.use(body);
+app.use(KoaLogger);
+app.use(koaBody);
 
-app.use(async (ctx, next) => {
+app.use(async (context, next) => {
   try {
     await next();
   } catch (error) {
-    ctx.throw(httpStatus.INTERNAL_SERVER_ERROR, error);
+    context.throw(httpStatus.INTERNAL_SERVER_ERROR, error);
   }
 });
 
-app.use((ctx, next) => {
-  ctx.assert(
-    ctx.state.user,
+app.use((context, next) => {
+  context.state.user = {
+    id: 1,
+    username: 'admin',
+  };
+  next();
+});
+
+app.use((context, next) => {
+  context.assert(
+    context.state.user,
     httpStatus.UNAUTHORIZED,
     'User not found. Please login!'
   );

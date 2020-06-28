@@ -18,10 +18,12 @@
     "cSpell.words": [
         "Chanh",
         "Postgres",
-        "prestart"
+        "prestart",
+        "respawn"
     ],
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.singleQuote": true,
-    "prettier.jsxSingleQuote": true
+    "prettier.jsxSingleQuote": true,
+    "editor.tabSize": 2
 }
