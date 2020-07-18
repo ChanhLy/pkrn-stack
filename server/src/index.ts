@@ -8,8 +8,12 @@ const PORT = process.env.PORT || '3000';
 
 const log = debug('Application');
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   log('Listening on port ' + PORT);
 });
 
-export default app;
+app.on('SIGTERM', () => {
+  server.close((err) => log(err));
+});
+
+export default server;
