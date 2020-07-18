@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node ./dist",
     "dev": "DEBUG=* ts-node-dev --respawn --clear --compiler typescript --transpile-only --project ./tsconfig.json ./src/index.ts",
-    "test": "mocha --require ts-node/register --extensions ts --watch --watch-files src './src/**/*.{test,spec}.ts'",
-    "test:watch": "mocha --require ts-node/register './src/**/*.{test,spec}.ts'",
+    "test": "mocha --require ts-node/register --extensions ts --watch --watch-files src './src/**/*.test.ts'",
+    "test:watch": "mocha --require ts-node/register './src/**/*.test.ts'",
     "tsc": "tsc",
     "pretest": "npm ci"
   },
