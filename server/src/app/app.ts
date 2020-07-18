@@ -1,11 +1,11 @@
 import Application = require('koa');
 import koaBody = require('koa-body');
-import KoaLogger = require('koa-logger');
+import koaLogger = require('koa-logger');
 import httpStatus from 'http-status';
 
 const app = new Application();
 
-app.use(KoaLogger);
+app.use(koaLogger);
 app.use(koaBody);
 
 app.use(async (context, next) => {
